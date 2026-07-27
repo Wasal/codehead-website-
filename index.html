@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CodeHead — mobile applications, backend systems and cloud services.">
+  <meta name="theme-color" content="#0a0a0b">
+  <title>CodeHead — Software & Cloud Development</title>
+
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --panel: #121214;
+      --line: #29292d;
+      --text: #f2f2f0;
+      --muted: #a3a3a8;
+      --accent: #c9ff31;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover { color: var(--accent); }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-bottom: 1px solid var(--line);
+      background: rgba(10, 10, 11, .92);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.06em;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: 120px 0 96px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 16px 0 30px;
+      font-size: clamp(46px, 8vw, 104px);
+      line-height: .93;
+      letter-spacing: -.075em;
+    }
+
+    h2 {
+      margin: 12px 0 18px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: -.03em;
+    }
+
+    p { margin: 0 0 16px; }
+
+    .lead {
+      max-width: 630px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 13px 19px;
+      border-radius: 3px;
+      background: var(--accent);
+      color: #121300;
+      font-weight: 800;
+    }
+
+    .button:hover {
+      color: #121300;
+      filter: brightness(.92);
+    }
+
+    section {
+      padding: 82px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--panel);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .details {
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .details li {
+      display: grid;
+      grid-template-columns: 155px 1fr;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .details strong {
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 32px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .hero { padding: 90px 0 72px; }
+      .grid, .split { grid-template-columns: 1fr; }
+
+      .details li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home">Code<span>Head</span></a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Software · Mobile · Cloud</div>
+
+        <h1>I build digital products that work and scale.</h1>
+
+        <p class="lead">
+          CodeHead is the brand of Sebastian Wąsik — a software developer
+          specialising in backend systems, mobile applications and cloud services.
+        </p>
+
+        <a class="button" href="#contact">Let's talk</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">01 / About</div>
+          <h2>Technology for real business.</h2>
+        </div>
+
+        <div class="muted">
+          <p>
+            I design and build end-to-end solutions: from architecture and APIs,
+            through integrations and data, to cloud deployments.
+          </p>
+
+          <p>
+            I combine long-term engineering experience with a pragmatic product
+            mindset, focusing on security, scalability and value for users.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="eyebrow">02 / Services</div>
+        <h2>Backend, mobile and cloud.</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Backend & API</h3>
+            <p class="muted">
+              .NET, C#, REST APIs, SQL Server, Entity Framework,
+              integrations and service architecture.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Mobile applications</h3>
+            <p class="muted">
+              Android and iOS applications — from MVPs to products
+              ready to grow with their users.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Cloud & scaling</h3>
+            <p class="muted">
+              Azure, microservices, asynchronous messaging,
+              deployments and reliable infrastructure.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">03 / Contact</div>
+          <h2>Have a product idea?</h2>
+
+          <p class="muted">
+            Get in touch to discuss an app, system or technology collaboration.
+          </p>
+        </div>
+
+        <div>
+          <ul class="details">
+            <li>
+              <strong>Brand</strong>
+              <span>CodeHead</span>
+            </li>
+
+            <li>
+              <strong>Contact person</strong>
+              <span>Sebastian Wąsik</span>
+            </li>
+
+            <li>
+              <strong>Email</strong>
+              <span>
+                <a href="mailto:REPLACE_WITH_BUSINESS_EMAIL">
+                  sebawasal@gmail.com
+                </a>
+              </span>
+            </li>
+
+
+            <li>
+              <strong>Tax ID / NIP</strong>
+              <span>813-337-91-03</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> CodeHead. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
